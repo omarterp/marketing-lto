@@ -1,0 +1,18 @@
+{
+    "contents" : "\n\nsource(\"./pkg_utils.R\")\nload_dependencies()\n\ndaily_sales <- read_excel(\"./daily_sales.xlsx\")\n\ndemographics <- read_excel(\"./demographic_data.xlsx\")\n\n\n",
+    "created" : 1446293278060.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1521795796",
+    "id" : "AFA9B566",
+    "lastKnownWriteTime" : 1446294462,
+    "path" : "C:/R/projects/marketing-lto/lto_analysis.R",
+    "project_path" : "lto_analysis.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "type" : "r_source"
+}

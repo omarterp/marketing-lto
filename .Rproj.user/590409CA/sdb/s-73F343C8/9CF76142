@@ -1,0 +1,18 @@
+{
+    "contents" : "detach_package <- function(pkg, character.only = FALSE)\n{\n  if(!character.only)\n  {\n    pkg <- deparse(substitute(pkg))\n  }\n  search_item <- paste(\"package\", pkg, sep = \":\")\n  while(search_item %in% search())\n  {\n    detach(search_item, unload = TRUE, character.only = TRUE)\n  }\n}\n\nhandle_package <- function(x) {\n  a <- require(x, character.only = TRUE)\n  if(!a) {\n    install.packages(x)\n    require(x, character.only = TRUE)\n  }\n}\n\n# load dependencies\nload_dependencies <- function(pkg_list = NULL) {\n\n  pkg <- c(\"ggplot2\",\"dplyr\",\"R.utils\",\"fdrtool\",\"caret\",\"randomForest\",\"pROC\", \n           \"readr\", \"stringr\", \"corrgram\", \"corrplot\", \"aod\", \"rvest\", \"ggfortify\",\n           \"zoo\", \"reshape2\", \"jsonlite\", \"devtools\", \"scales\", \"forecast\", \n           \"wesanderson\", \"RColorBrewer\", \"read_r\", \"readxl\", pkg_list)\n  \n  lapply(pkg, handle_package)\n\n}\n\n",
+    "created" : 1446293068153.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "901046412",
+    "id" : "9CF76142",
+    "lastKnownWriteTime" : 1446294342,
+    "path" : "C:/R/projects/marketing-lto/pkg_utils.R",
+    "project_path" : "pkg_utils.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "type" : "r_source"
+}
